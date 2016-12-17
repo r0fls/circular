@@ -45,5 +45,7 @@ function size() {
   });
 }
 $(window).on('load', size);
-$(window).on('ready', size);
 $(window).on('resize', size);
+$(document).ready(function() {
+  $('.content').fadeIn(750);
+});

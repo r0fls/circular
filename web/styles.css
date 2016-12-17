@@ -49,6 +49,7 @@ table {
 }
 /* End Reset */
 .content {
+  display: none;
   overflow-x: hidden;
   overflow-y: scroll;
 }

@@ -40,7 +40,8 @@ function size() {
   $(".text").css({
     "font-size": font,
     "margin": "auto",
-    "margin-top": mtop/2,
+    "margin-top": mtop/3,
+    "margin-bottom": 75,
   });
 }
 $(window).on('load', size);

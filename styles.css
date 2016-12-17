@@ -62,7 +62,7 @@ table {
   padding-bottom: 10px;
   min-width: 250px;
   text-align: center;
-  border: 1px solid white;
+  /*border: 1px solid white;*/
 }
 .fa {
   padding-right: 30px;
@@ -70,4 +70,8 @@ table {
 }
 .text {
   font-family: Arial, Geneva, Helvetica, sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: inherit; /* no underline */
 }

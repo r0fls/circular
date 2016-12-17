@@ -47,5 +47,6 @@ function size() {
 $(window).on('load', size);
 $(window).on('resize', size);
 $(document).ready(function() {
+  size();
   $('.content').fadeIn(750);
 });

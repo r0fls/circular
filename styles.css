@@ -48,6 +48,10 @@ table {
   border-spacing: 0;
 }
 /* End Reset */
+.content {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 .image {
   border-radius: 50%;
   margin: auto;

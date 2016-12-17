@@ -14,28 +14,10 @@ function size() {
   $(".image").css("border-radius", "%50");
   $(".content").css("width", $(window).width());
   $(".content").css("height", $(window).height());
+  $(".content").css("min-height", 400);
   $("body").css("background", "#101020");
   $("body").css("min-height", 500);
-  var pad = 30;
-  if ($(window).width() < 800) {
-    var pad = 15;
-  }
-  if ($(window).width() < 550) {
-    var pad = 6;
-  }
-  $(".fa").css({
-    "color": "white",
-    "padding-left": pad,
-    "padding-right": pad,
-  });
-  var mtop = [dims*.2, 70].max();
-  $(".icons").css({
-    "width": dims*0.7,
-    "margin": "auto",
-    "border-radius": 3,
-    "margin-top": mtop,
-  });
-  var pad = 30;
+  var pad = 15;
   var font = 40;
   if ($(window).width() < 800) {
     var pad = 15;
@@ -45,11 +27,23 @@ function size() {
     var pad = 6;
     var font = 22;
   }
+   $(".fa").css({
+    "color": "white",
+    "padding-left": pad/1.8,
+    "padding-right": pad/1.8,
+    "padding-bottom": pad/1.8,
+  });
+  var mtop = [dims*.2, 70].max();
+  $(".icons").css({
+    "width": dims*0.7,
+    "margin": "auto",
+    "margin": "auto",
+    "border-radius": 3,
+    "margin-top": mtop,
+  });
   $(".text").css({
     "text-align": "center",
     "color": "white",
-    "padding-left": pad,
-    "padding-right": pad,
   });
   var mtop = [dims*.01, 22].max();
   $(".text").css({
@@ -59,8 +53,6 @@ function size() {
     "margin-top": mtop,
   });
 }
-$('body').css('overflow-x', 'hidden');
-$('body').css('overflow-y', 'hidden');
 $(window).on('load', size);
 $(window).on('ready', size);
 $(window).on('resize', size);

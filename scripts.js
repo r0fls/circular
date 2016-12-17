@@ -19,21 +19,13 @@ function size() {
   $("body").css("min-height", 500);
   var pad = 15;
   var font = 40;
-  if ($(window).width() < 800) {
-    var pad = 15;
-    var font = 32;
-  }
-  if ($(window).width() < 550) {
-    var pad = 6;
-    var font = 22;
-  }
-   $(".fa").css({
+  $(".fa").css({
     "color": "white",
-    "padding-left": pad/1.8,
-    "padding-right": pad/1.8,
-    "padding-bottom": pad/1.8,
+    "padding-left": pad,
+    "padding-right": pad,
+    "padding-bottom": pad,
   });
-  var mtop = [dims*.2, 70].max();
+  var mtop = [$(window).height()*.15, 70].max();
   $(".icons").css({
     "width": dims*0.7,
     "margin": "auto",
@@ -45,12 +37,10 @@ function size() {
     "text-align": "center",
     "color": "white",
   });
-  var mtop = [dims*.01, 22].max();
   $(".text").css({
     "font-size": font,
-    "width": dims*0.7,
     "margin": "auto",
-    "margin-top": mtop,
+    "margin-top": mtop/2,
   });
 }
 $(window).on('load', size);

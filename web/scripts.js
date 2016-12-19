@@ -10,7 +10,7 @@ function size() {
   var dims = [$(window).width(), $(window).height()].min()*.6;
   $(".image").css("width", dims);
   $(".image").css("height", dims);
-  $(".image").css("margin-top", $(window).height()*.05);
+  $(".image").css("margin-top", [$(window).height()*.05 - 20, 4].max());
   $(".image").css("border-radius", "%50");
   $(".content").css("width", $(window).width());
   $(".content").css("height", $(window).height());
@@ -25,7 +25,7 @@ function size() {
     "padding-right": pad,
     "padding-bottom": pad,
   });
-  var mtop = [$(window).height()*.15, 70].max();
+  var mtop = [$(window).height()*.10, 55].max();
   $(".icons").css({
     "width": dims*0.7,
     "margin": "auto",
@@ -41,7 +41,6 @@ function size() {
     "font-size": font,
     "margin": "auto",
     "margin-top": mtop/3,
-    "margin-bottom": 75,
   });
 }
 $(window).on('load', size);
